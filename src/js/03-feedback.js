@@ -25,14 +25,12 @@ function onInputForm(event) {
 
 function onSubmitForm(event) {
     event.preventDefault();
-
     localStorage.removeItem('feedback-form-state');
 
     if (email.value === "" || message.value === "") {
     return alert("Please fill in all the fields!");
   }
- 
-    console.log(`User's email: ${email.value.trim()} \nmessage: ${message.value.trim()}`);
+    console.log("User information:\n", objOfValue);
 
     event.currentTarget.reset();
 }
